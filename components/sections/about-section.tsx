@@ -14,19 +14,13 @@ export function AboutSection() {
             <SectionTitle subtitle="Our Legacy" title="Our Temple History" alignment="left" />
             <div className="space-y-4 text-slate-700 leading-relaxed">
               <p>
-                Founded in 1985, Sree Mulamkadakom Devi Temple has served as a spiritual beacon for the Hindu community.
-                What began as a small gathering of devoted families has grown into a vibrant center for worship,
-                cultural celebration, and community service.
+                Sree Mulankadakam Devi Temple is a cherished spiritual sanctuary in the heart of Kollam, built upon a powerful legend of divine grace.
               </p>
               <p>
-                Our temple was constructed following traditional Vastu Shastra principles, with each element carefully
-                designed to create a sacred space that connects devotees with the divine. The main shrine was
-                consecrated in 1987, with additional shrines added as our community grew.
+                Centuries ago, the Goddess Sree Bhadrakali revealed herself in this location. Through a series of miracles, she demonstrated her compassion and power by protecting an innocent devotee from a king's wrath. As an act of profound reverence and atonement, the king established this temple in her honor.
               </p>
               <p>
-                Today, our temple stands as a testament to the dedication of generations of devotees who have
-                contributed their time, resources, and spiritual energy to creating this sacred space for all who seek
-                connection with the divine.
+                From these humble and miraculous beginnings, our temple has grown into a beacon of faith for all who seek the peace and blessings of the Divine Mother.
               </p>
             </div>
             <Button className="mt-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-full px-8">
@@ -43,10 +37,6 @@ export function AboutSection() {
                 height={600}
                 className="rounded-lg shadow-2xl"
               />
-              <div className="absolute -bottom-4 -right-4 bg-amber-50 p-4 rounded-lg shadow-xl border border-amber-200">
-                <div className="text-amber-900 font-bold">Established</div>
-                <div className="text-3xl font-serif text-amber-800">1985</div>
-              </div>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ export function HeroSection() {
           <div className="relative z-10">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
               {/* Goddess Image with Mandala Aura */}
-              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 glow-effect overflow-visible">
+              <div className="relative w-56 h-56 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] shrink-0 glow-effect overflow-visible">
                 {/* Mandala Aura - positioned behind goddess */}
                 <div className="absolute inset-0 flex items-center justify-center -z-10">
                   <Image

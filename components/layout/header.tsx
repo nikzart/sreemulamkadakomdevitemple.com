@@ -19,7 +19,7 @@ export function Header() {
   const navItems = [
     { name: "About", path: "/#about" },
     { name: "Deities", path: "/#deities" },
-    { name: "Events", path: "/#events" },
+    { name: "Pooja Timings", path: "/#events" },
     { name: "Gallery", path: "/gallery" },
     { name: "Trust Members", path: "/trust-members" },
     { name: "Priests", path: "/priests" },
