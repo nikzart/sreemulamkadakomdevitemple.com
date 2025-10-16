@@ -15,19 +15,26 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white text-center px-4 py-16 md:py-0 overflow-hidden pointer-events-auto">
         <div className="relative">
-          <Image
-            src="/golden-mandala.png"
-            alt="Decorative Mandala"
-            width={200}
-            height={200}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-40 animate-spin-slow"
-            priority
-          />
           <div className="relative z-10">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 max-w-6xl mx-auto">
-              {/* Goddess Image */}
-              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 glow-effect">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500/30 to-red-500/30 blur-md"></div>
+              {/* Goddess Image with Mandala Aura */}
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 shrink-0 glow-effect overflow-visible">
+                {/* Mandala Aura - positioned behind goddess */}
+                <div className="absolute inset-0 flex items-center justify-center -z-10">
+                  <Image
+                    src="/mandala.png"
+                    alt="Mandala Aura"
+                    width={500}
+                    height={500}
+                    className="w-[200%] h-[200%] object-contain animate-spin-slow"
+                    style={{
+                      filter: "invert(1) brightness(2) drop-shadow(0 0 40px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 80px rgba(251, 191, 36, 0.6))",
+                      opacity: 0.6
+                    }}
+                    priority
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-500/30 to-red-500/30 blur-md z-0"></div>
                 <Image
                   src="/Mulamkadakom_Devi.png"
                   alt="Goddess Devi"
