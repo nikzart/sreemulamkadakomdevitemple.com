@@ -19,6 +19,7 @@ export function Header() {
   const navItems = [
     { name: "About", path: "/#about" },
     { name: "Deities", path: "/#deities" },
+    { name: "Mythology", path: "/mythology" },
     { name: "Pooja Timings", path: "/#events" },
     { name: "Gallery", path: "/gallery" },
     { name: "Trust Members", path: "/trust-members" },
@@ -36,6 +37,10 @@ export function Header() {
     }
 
     if (path === "/priests" && pathname === "/priests") {
+      return true
+    }
+
+    if (path === "/mythology" && pathname === "/mythology") {
       return true
     }
 
