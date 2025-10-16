@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -60,15 +61,19 @@ export function HeroSection() {
                   <span className="block">നാരായണി&nbsp;നമോസ്തുതേ.</span>
                 </h1>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full max-w-full flex-wrap relative z-30 pointer-events-auto">
-                  <Button className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-base">
-                    Visit Temple
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white/20 transition-all duration-300 rounded-full px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-base font-medium backdrop-blur-sm bg-black/20"
-                  >
-                    View Schedule
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white border-none shadow-lg hover:shadow-xl transition-all duration-300 rounded-full px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-base">
+                      Visit Temple
+                    </Button>
+                  </Link>
+                  <Link href="/#events">
+                    <Button
+                      variant="outline"
+                      className="border-2 border-white text-white hover:bg-white/20 transition-all duration-300 rounded-full px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-base font-medium backdrop-blur-sm bg-black/20"
+                    >
+                      View Schedule
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

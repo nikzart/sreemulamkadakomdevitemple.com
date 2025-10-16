@@ -152,6 +152,27 @@ export function ContactSection({ showTitle = true }: ContactSectionProps) {
             </div>
           </div>
         </div>
+
+        {/* Google Maps Section */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-amber-900 font-serif mb-2">Find Us</h3>
+            <p className="text-amber-700">Visit our temple and experience divine blessings</p>
+            <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-600 mx-auto mt-4"></div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.8157486774476!2d76.56343641228942!3d8.896715691122555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fc3358ab89bf%3A0xb30314e8ed8388c6!2sSri%20Mulamkadakam%20Devi%20Temple!5e0!3m2!1sen!2sin!4v1760608502438!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sree Mulamkadakom Devi Temple Location"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </section>
   )

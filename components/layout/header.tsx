@@ -77,13 +77,14 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Button
-          variant="outline"
-          className="hidden md:flex border-amber-600 text-amber-600 hover:bg-amber-100 hover:text-amber-700 transition-all duration-300"
-          onClick={() => (window.location.href = "/contact")}
-        >
-          Contact
-        </Button>
+        <Link href="/contact">
+          <Button
+            variant="outline"
+            className="hidden md:flex border-amber-600 text-amber-600 hover:bg-amber-100 hover:text-amber-700 transition-all duration-300"
+          >
+            Contact
+          </Button>
+        </Link>
         <Button
           variant="ghost"
           size="icon"
@@ -205,12 +206,14 @@ export function Header() {
                   }}
                   className="mt-2"
                 >
-                  <Button
-                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white"
-                    onClick={() => (window.location.href = "/contact")}
-                  >
-                    Contact
-                  </Button>
+                  <Link href="/contact" className="block">
+                    <Button
+                      className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Contact
+                    </Button>
+                  </Link>
                 </motion.div>
               </motion.div>
             </motion.div>

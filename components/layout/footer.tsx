@@ -13,6 +13,7 @@ export function Footer() {
     { name: "Gallery", path: "/gallery" },
     { name: "Trust Members", path: "/trust-members" },
     { name: "Priests", path: "/priests" },
+    { name: "Contact", path: "/contact" },
   ]
 
   return (
