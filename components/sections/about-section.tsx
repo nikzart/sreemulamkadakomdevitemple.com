@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { SectionTitle } from "@/components/ui/section-title"
 
@@ -23,16 +24,18 @@ export function AboutSection() {
                 From these humble and miraculous beginnings, our temple has grown into a beacon of faith for all who seek the peace and blessings of the Divine Mother.
               </p>
             </div>
-            <Button className="mt-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-full px-8">
-              Learn More
-            </Button>
+            <Link href="/mythology">
+              <Button className="mt-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-full px-8">
+                Learn More
+              </Button>
+            </Link>
           </div>
           <div className="md:w-1/2 relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-red-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
             <div className="relative">
               <Image
-                src="/temple-gathering.png"
-                alt="Temple Interior"
+                src="/images/temple-front.jpg"
+                alt="Temple Front View"
                 width={800}
                 height={600}
                 className="rounded-lg shadow-2xl"

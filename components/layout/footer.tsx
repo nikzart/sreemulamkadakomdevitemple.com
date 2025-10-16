@@ -1,11 +1,19 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { Facebook } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
-  const socialLinks = ["facebook", "instagram", "twitter", "youtube"]
-  const quickLinks = ["About", "Deities", "Events", "Gallery", "Donate", "Contact"]
+  const quickLinks = [
+    { name: "About", path: "/#about" },
+    { name: "Deities", path: "/#deities" },
+    { name: "Mythology", path: "/mythology" },
+    { name: "Pooja Timings", path: "/#events" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Trust Members", path: "/trust-members" },
+    { name: "Priests", path: "/priests" },
+  ]
 
   return (
     <footer className="bg-gradient-to-r from-amber-900 to-red-900 text-amber-100 pt-16 pb-8 relative overflow-hidden">
@@ -18,7 +26,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="relative h-12 w-12">
-                <Image src="/om-symbol.png" alt="Om Symbol" fill className="object-contain brightness-0 invert" />
+                <Image src="/golden-om-symbol.png" alt="Om Symbol" fill className="object-contain" />
               </div>
               <div>
                 <span className="text-2xl font-bold text-amber-100 font-serif">Sree Mulamkadakom Devi Temple</span>
@@ -27,22 +35,19 @@ export function Footer() {
             <p className="text-amber-200 mb-6">
               A sacred space dedicated to spiritual growth, cultural preservation, and community service.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+            <div className="mt-8">
+              <h3 className="text-lg font-bold mb-4 text-amber-100 font-serif">Connect With Us</h3>
+              <div className="flex space-x-4">
                 <Link
-                  key={social}
-                  href="#"
-                  className="bg-amber-800/30 p-2 rounded-full hover:bg-amber-700/50 transition-colors"
+                  href="https://www.facebook.com/sreemulamkadakomdevitemple"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-amber-800/30 p-3 rounded-full hover:bg-amber-700/50 transition-colors"
+                  aria-label="Visit our Facebook page"
                 >
-                  <Image
-                    src={`/icon-${social}.png`}
-                    alt={social}
-                    width={24}
-                    height={24}
-                    className="brightness-0 invert"
-                  />
+                  <Facebook className="w-5 h-5 text-amber-100" />
                 </Link>
-              ))}
+              </div>
             </div>
           </div>
 
@@ -50,9 +55,9 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-6 text-amber-100 font-serif">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href={`#${item.toLowerCase()}`}
+                    href={item.path}
                     className="text-amber-200 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <svg
@@ -68,7 +73,7 @@ export function Footer() {
                     >
                       <polyline points="9 18 15 12 9 6" />
                     </svg>
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
